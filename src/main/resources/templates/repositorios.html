@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Meus Repositorios</title>
+</head>
+<body>
+
+<table>
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>URL</th>
+    <th>Nome</th>
+    <th>Descrição</th>
+    <th>Linguagens</th>
+    <th>Ações</th>
+  </tr>
+  </thead>
+
+  <tbody>
+    <tr th:each="repo : ${repositorios}">
+      <td th:text="${repo.id}">Id</td>
+      <td th:text="${repo.url}">URL</td>
+      <td th:text="${repo.nome}">Nome</td>
+      <td th:text="${repo.descricao}">Descrição</td>
+      <td th:text="${repo.linguagens}">Linguagens</td>
+      <td th:href="@{/excluir/{id} (id=$[repo.id})}">excluir</td>
+    </tr>
+  </tbody>
+
+</table>
+
+</body>
+</html>

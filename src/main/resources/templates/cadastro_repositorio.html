@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form th:object="${repositorio}" th:action="@{/salvarRepositorio}" method="post">
+    <label for="url">Url do repositório:</label>
+    <input type="text" id="url" name="url" th:field="*{url}">
+
+    <label for="nome">Nome do repositório:</label>
+    <input type="text" id="nome" name="nome" th:field="*{nome}">
+
+    <label for="descricao">Descrição do repositório:</label>
+    <input type="text" id="descricao" name="descricao" th:field="*{descricao}">
+
+    <label for="linguagens">Linguagens que o projeto utiliza:</label>
+    <input type="text" id="linguagens" name="linguagens" th:field="*{linguagens}">
+
+    <br><br>
+
+    <button>Salvar</button>
+
+    </form>
+</body>
+</html>
