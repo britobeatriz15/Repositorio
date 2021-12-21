@@ -1,10 +1,10 @@
 plugins {
-	id 'org.springframework.boot' version '2.5.4'
+	id 'org.springframework.boot' version '2.6.0'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 }
 
-group = 'com.sp.senac.br'
+group = 'com.sp.senac'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
@@ -19,7 +19,8 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
 	// https://mvnrepository.com/artifact/mysql/mysql-connector-java
-	implementation 'mysql:mysql-connector-java:8.0.26'
+	implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.27'
+
 }
 
 test {
